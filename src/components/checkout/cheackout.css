@@ -1,0 +1,84 @@
+
+.card {
+    padding: 10px;
+    background-color: darkcyan;
+
+}
+.card h2 {
+font-size: 19px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-productos{
+    position: relative;
+    margin: 2px;
+    padding: 5px;
+    width: 60%;
+    background-color: rgb(255, 255, 255) ;
+    border-radius: 10px;
+ 
+}
+.card-resumen{
+    position: relative;
+    margin: 2px;
+    padding: 5px;
+
+    width: 40%;
+    height: 150px;
+    border-radius: 10px;
+    align-content: center;
+     background-color: rgb(255, 255, 255) ;
+
+}
+.fila{
+    display: flex;
+}
+.btnComprar{
+    cursor: pointer;
+    border: none;
+    background-color: rgb(3, 34, 65);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+}
+.btnComprar:hover{
+    border: none;
+    background-color: rgb(3, 65, 122);
+   
+}
+
+.btnRegresar{
+    margin: 10px;
+     cursor: pointer;
+    border: none;
+    background-color: rgb(4, 61, 44);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+}
+.btnRegresar:hover{
+    border: none;
+    background-color: rgb(10, 100, 70);
+   
+}
+
+.btnEliminar{
+    margin: 10px;
+     cursor: pointer;
+    border: none;
+    background-color: rgb(185, 29, 29);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    border-radius: 25px;
+    width: 90px;
+    height: 30px;
+}
+.btnEliminar:hover{
+    border: none;
+    background-color: rgb(238, 9, 9);   
+}

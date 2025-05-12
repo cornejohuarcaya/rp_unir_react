@@ -1,0 +1,10 @@
+.card-comentario{
+    width: 80%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: azure;
+    padding-left: 20px;
+    padding-top: 2px;
+ 
+    border-radius: 10px;
+
+}
