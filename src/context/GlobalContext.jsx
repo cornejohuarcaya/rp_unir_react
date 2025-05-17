@@ -43,16 +43,32 @@ export const GlobalProvider = ({ children }) => {
     }
      
   };
+  const updateCant=(libro)=> {  
+    const productoExistente = carrito.productos.find((item) => item.id === libro.id);
+
+    if (productoExistente && libro.cantidad>0){
+      console.log(' actualizando  cantidad ' + JSON.stringify(libro));
+      const lista=  carrito.productos.map(item =>
+        item.id === libro.id
+          ? { ...item, cantidad: (libro.cantidad ) }
+          : item
+      );
+      setCarrito( { productos:[...lista]});
+    } 
+     else
+    {
+      deleteLibro(libro)} 
+  };
   /////////
-  const { listaCarrito, AgregarLibro, EliminarLibro } = useCarrito();
+  const { listaCarrito, AgregarLibro, EliminarLibro, Limpiar , ActualizarCantidad} = useCarrito();
 
   const changeSessionLanguage = (newLanguage) => {
     setSessionLanguage(newLanguage);
   };
 
   return (
-      <GlobalContext.Provider value={{ darkMode, sessionLanguage, carrito,  toggleDarkMode, changeSessionLanguage, addLibro, deleteLibro ,
-        listaCarrito,AgregarLibro, EliminarLibro
+      <GlobalContext.Provider value={{ //darkMode, sessionLanguage, carrito,  toggleDarkMode, changeSessionLanguage, addLibro, deleteLibro , updateCant,
+        listaCarrito, AgregarLibro, EliminarLibro, Limpiar, ActualizarCantidad
       }}>
         {children}
       </GlobalContext.Provider>

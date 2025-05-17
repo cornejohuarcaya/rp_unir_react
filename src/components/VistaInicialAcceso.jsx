@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import VistaResultadoBusqueda from './VistaResultadosBusqueda';
 import VistaBusqueda from './VistaBusqueda'
-import VistaCheckout from './checkout/VistaCheackout';
+import VistaCheckout from './carrito/VistaCarrito';
 
 const VistaInicialAcceso = () => {
     const [titulo, setTitulo] = useState(''); // Título por defecto

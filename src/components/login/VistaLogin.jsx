@@ -2,7 +2,7 @@ import {React, useContext, useState} from 'react';
 import  useLogin  from '../../hooks/useLogin';
 import { AuthContext } from '../../context/AuthContext';
 import { useLocation, useNavigate } from 'react-router';
- 
+ import './login.css'
 const Login =() =>{
 
     const [username, setUsername] = useState('');
@@ -13,7 +13,7 @@ const Login =() =>{
     const location = useLocation();
 
     // Determinar la ruta de redirección. Si viene de una ruta protegida, se usa "from"
-    const from = location.state?.from || '/';
+    const from = location.state?.from || '/search';
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -31,9 +31,11 @@ const Login =() =>{
 
     return (
         <div>
+            
             <form onSubmit={handleSubmit} className="login__form">
+            <p className="login_titulo" >Inicio de sesión</p>
                 <div className="login__form-group">
-                    <label htmlFor="username" className="login__label">Nombre de usuario</label>
+                    <label htmlFor="username" className="login__label">Nombre de usuario</label><br />
                     <input
                         type="text"
                         id="username"
@@ -45,7 +47,7 @@ const Login =() =>{
                     />
                 </div>
                 <div className="login__form-group">
-                    <label htmlFor="password" className="login__label">Contraseña</label>
+                    <label htmlFor="password" className="login__label">Contraseña</label><br />
                     <input
                         type="password"
                         id="password"

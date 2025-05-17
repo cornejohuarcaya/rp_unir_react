@@ -82,3 +82,9 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: none;
     background-color: rgb(238, 9, 9);   
 }
+.card-item {
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.card-item #cantidad{
+    width: 35px;
+}

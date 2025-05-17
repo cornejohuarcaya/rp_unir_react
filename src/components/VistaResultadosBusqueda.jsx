@@ -11,7 +11,7 @@ const VistaResultadoBusqueda = ({titulo}) => {
     useEffect(() => {  
         let newLibros=dataLibrosTop;    
         if (titulo!=null  && titulo!='')
-            newLibros=dataLibros.filter((a)=> titulo==a.titulo); 
+            newLibros=dataLibros.filter((a)=> a.titulo.toLowerCase().includes(titulo.toLowerCase())); 
  
         setLibros(newLibros);
     },[titulo]);

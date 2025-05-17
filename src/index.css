@@ -9,7 +9,12 @@ justify-content: center;
 
 }
 
-.banner button{
+.img-logo{
+  width: 150px;
+  margin-left: 100px;
+}
+
+.btnCarrito {
   cursor: pointer;
   padding: 10px;
   font-size: 15px;
@@ -17,16 +22,44 @@ justify-content: center;
   border: none;
   border-radius: 10px; 
   color: white;
+  position: absolute;
+  top: 60px;
+  right: 30px;
 }
-.banner button:hover{
+.btnLogin {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  background-color: #032858;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 25px;
+  cursor: pointer;
+  color: white;
+}
+.btnLogin:hover{
+  background-color: #053a80;
+
+}
+
+.btnCarrito:hover{
   background-color: #082d74;
 
 }
 .banner #titulo{
+  position: absolute;
+  top: 25px;
+  left: 300px;
   font-size: 50px;
 }
 .banner #user{
-color: #0026ff;}
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  color: #09265c;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: normal;}
 
 .contenedor-pantalla{
   display: flex;
@@ -43,58 +76,11 @@ color: #0026ff;}
    border-color: #02d42f;
 }
 
-
-.contenedor-butaca{
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  background-color: white;
-  width: 100%;
-  height: 900px;
-  font-family: 'Lucida Sans Regular' , sans-serif;
-  font-size: 26px;
-  text-align: center;
-}
+ 
 .centro {
   align-self: center;
 }
 
-.asiento{
-  appearance: none;
-  cursor: pointer;
-  background-color: #fff;    
-  width: 48px;
-  height: 48px;
-   border: 2px solid #175229;
-}
-
-.seleccionado
-{
-  appearance: none;
-  cursor: pointer;
-  background-color: #f59506;    
-  width: 48px;
-  height: 48px;
-   border: 2px solid #175229;
-}
-.ocupado{
-  appearance: none;
-  cursor: pointer;
-  background-color: #ff0000;
-  width: 48px;
-  height: 48px;
-   border: 2px solid #175229;
-}
-
-.asiento:checked{
-  appearance: none;
-  cursor: pointer;
-  background-color: #f59506;
-  width: 48px;
-  height: 48px;
-   border: 2px solid #022d7e;
-}
 
 footer {
    padding: 50px;
@@ -105,39 +91,11 @@ footer {
   text-align: center;
 
 }
-#txtNumAsientos{
-  margin-top: 10px;
-  font-family: 'Lucida Sans Regular', sans-serif;
-  font-size: 25px;
-  padding: 7px;
-  width: 60px;
-  text-align: center;
-  border-color: #022d7e;
-  border-radius: 5px;
-}
-
-.send{
-  margin-top: 10px;
-  font-family: 'Lucida Sans Regular', sans-serif;
-  font-size: 25px;
-  padding: 7px;
-  width: 120px;
-  text-align: center;
-  background-color: #022d7e;
-  color: white;
-  border-radius: 20px;
-  border: none; /* Elimina el borde */
-  cursor: pointer;
-
-}
-.send:hover{
-  background-color: #053ea8;
-
-}
+  
 .card-movie{
   border-color: #71ffec;
   border-radius: 5px;
-  background-color: #67706f;
+  background-color: #a5e6de;
   margin: 7px;
   padding: 3px;
   padding-left: 10px;
@@ -217,4 +175,9 @@ footer {
   }
   .fila{
     display: flex;
+}
+
+.compraExitosa{
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

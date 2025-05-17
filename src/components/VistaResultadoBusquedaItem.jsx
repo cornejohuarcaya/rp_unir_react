@@ -3,9 +3,9 @@ import { Link } from 'react-router';
 import { GlobalContext } from './../context/GlobalContext';
 
 const VistaResultadoBusquedaItem = ({libro}) => {
-    const {    addLibro } = useContext(GlobalContext);
+    //const {    addLibro } = useContext(GlobalContext);
  
-    const { listaCarrito, AgregarLibro, EliminarLibro } = useContext(GlobalContext);
+    const { listaCarrito, AgregarLibro, EliminarLibro, ActualizarCantidad } = useContext(GlobalContext);
 
     
     const handleClick = (e) => { 
@@ -16,7 +16,7 @@ const VistaResultadoBusquedaItem = ({libro}) => {
             precioUnitario: libro.precio
         };
         console.log('enviando libro al carrito' ,libroAgregar  );
-        addLibro(libroAgregar);
+       // addLibro(libroAgregar);
 
         AgregarLibro(libroAgregar);
 
@@ -42,7 +42,7 @@ const VistaResultadoBusquedaItem = ({libro}) => {
                 <p>precio: {libro.precio} </p>
                 <p className='puntaje'>{libro.puntuacion} </p>
 
-                <button className='addCarr'   onClick={ handleClick } >Agregar</button>
+                <button className='addCarr'   onClick={ handleClick } ><i className="fa-solid fa-cart-plus"></i> Agregar</button>
              </td>
             </tr>
             </tbody>

@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
- import VistaCheckout from './components/checkout/VistaCheackout'
+ import VistaCheckout from './components/carrito/VistaCarrito'
 import VistaDetalleLibro from './components/VistaDetalleLibro'
 import VistaInicialAcceso from './components/VistaInicialAcceso'
 import VistaLogin from './components/login/VistaLogin'
@@ -15,6 +15,7 @@ import VistaPay from './components/VistaPay'
 import Error404 from './components/Error404';
 import { AuthProvider } from './context/AuthContext';
 import VistaPrincipal from './components/landing/VistaPrincipal';
+import VistaCompraExitosa from './components/VistaCompraExitosa';
 
 
 function AppContent() {
@@ -28,7 +29,8 @@ function AppContent() {
      {!hideLayout && <Header />}
     <Routes>
           <Route path="*" element={<Error404/>} />
-          <Route path="/" element={<VistaPrincipal/>} />
+          <Route path="/" element={<VistaPrincipal/>} /> 
+          <Route path="/compraExitosa" element={<VistaCompraExitosa/>} />
           <Route path="/search" element={<VistaInicialAcceso/>} />
           <Route path="/checkout" element={<VistaCheckout />} />
           <Route path="/detLibro/:id" element={<VistaDetalleLibro />} />

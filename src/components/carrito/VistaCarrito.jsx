@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router';
-import   './cheackout.css';
+import   './carrito.css';
 import { GlobalContext } from '../../context/GlobalContext';
-import CheackoutItem from '../ChekoutItem';
+import CarritoItem from '../CarritoItem';
 
-const VistaCheckout = () => {
+const VistaCarrito = () => {
     
-    const { carrito } = useContext(GlobalContext);
+    const { listaCarrito:carrito } = useContext(GlobalContext);
 
     let cantidad=0;
     let total=0;
@@ -14,12 +14,12 @@ const VistaCheckout = () => {
     carrito.productos.map(item=>{
         cantidad+=item.cantidad;
         total+=item.cantidad*item.precioUnitario
-
+        total = parseFloat(total.toFixed(2));
     })
 
     return (
         <div className='card'>
-            VistaCheckout
+            VistaCarrito
             <h2>Productos en carrito</h2>
             <br />
 
@@ -27,7 +27,7 @@ const VistaCheckout = () => {
             <div className='card-productos' >
 
             { carrito.productos.map((libro) => (
-            <CheackoutItem  key={libro.id} libro={libro}/>
+            <CarritoItem  key={libro.id} libro={libro}/>
                     
             
             ))}   
@@ -45,7 +45,7 @@ const VistaCheckout = () => {
             <div>
                 
                 <Link key='regresar' to={`/search`}>
-                    <button className='btnRegresar' >Regresar</button>
+                    <button className='btnRegresar' > <i className="fa-solid fa-arrow-rotate-left"></i> Regresar</button>
                 </Link>
             </div>
 
@@ -53,4 +53,4 @@ const VistaCheckout = () => {
     )
 };
 
-export default VistaCheckout;
+export default VistaCarrito;
